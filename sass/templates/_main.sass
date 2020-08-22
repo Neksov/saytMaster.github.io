@@ -1,0 +1,75 @@
+.mainWrapper
+  display: flex
+  flex-direction: row
+  &__left
+    margin-right: 30px
+  &__right
+    background: #6bd3b4
+    width: 270px
+.cards
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  counter-reset: albumList
+.card 
+  width: 270px
+  height: 415px
+  position: relative
+  background: #FFFFFF
+  border-radius: 10px
+  order: 0
+  align-self: center
+  margin: 30px 30px 9px 0
+  &__info
+    margin-left: 15px
+    margin-top: 12px
+.info    
+  &__title
+    font-weight: bold
+    font-size: 18px
+    line-height: 110%
+  &__term
+    margin-top: 15px
+    font-weight: normal
+    line-height: 180%
+  &__adress
+    margin-top: 5px
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    width: 240px
+    height: 75px
+.service
+  position: absolute
+  width: 77px
+  height: 1.54rem
+  background: #F03B8C
+  border-radius: 5px
+  top: 10px
+  left: 10px
+  font-style: normal
+  font-weight: 500
+  font-size: 12px
+  line-height: 190%
+  color: #FFFFFF
+  display: flex
+  align-items: center
+  justify-content: center
+  &__two
+    left: 97px
+.heart
+  position: absolute
+  top: 5px
+  right: 5px
+.metro
+  margin-right: 8px
+.clarification
+  color: #8F8F8F
+.building
+  position: relative
+  border-radius: 10px 10px 0 0
+.plus
+  margin-bottom: 10px
+  transition: .3s ease-in-out
+  &:hover
+    transform: scale(1.2)
