@@ -9,37 +9,29 @@ $(document).ready(function () {
   }
   list.slice(0, numToShow).show();
   button.click(function () {
-    var showing = list.filter(':visible').length;
+    var showing = list.filter(":visible").length;
     list.slice(showing - 1, showing + numToShow).fadeIn();
-    var nowShowing = list.filter(':visible').length;
+    var nowShowing = list.filter(":visible").length;
     if (nowShowing >= numInList) {
       button.hide();
     }
   });
-});
-
-function DropDown(el) {
-  this.dd = el;
-  this.initEvents();
-}
-DropDown.prototype = {
-  initEvents: function () {
-    var obj = this;
-
-    obj.dd.on('click', function (event) {
-      $(this).toggleClass('active');
-      event.stopPropagation();
-    });
-  }
-}
-
-$(function () {
-
-  var distance = new DropDown($('#distance'));
-
-  $(document).click(function () {
-    // all dropdowns
-    $('.wrapper-dropdown-2').removeClass('active');
+  $(".accordion-label").click(function (event) {
+    $(".return").toggleClass("active");
   });
-
+  $(".box1").click(function (event) {
+    $(".box1").toggleClass("active");
+  });
+  $(".box2").click(function (event) {
+    $(".box2").toggleClass("active");
+  });
+  $(".box3").click(function (event) {
+    $(".box3").toggleClass("active");
+  });
+  $(".box4").click(function (event) {
+    $(".box4").toggleClass("active");
+  });
+  $(".distance__btn").click(function (event) {
+    $(".box").toggleClass("active");
+  });
 });

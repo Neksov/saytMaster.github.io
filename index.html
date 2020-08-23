@@ -195,16 +195,23 @@
             <button class="btn"><img src="img/plus.svg" alt="plus" class="plus"> Показать ещё</button>
           </div>
           <div class="rightColumn mainWrapper__right">
-            <div class="distance rightColumn__distance">
-              <div id="distance" class="wrapper-dropdown-2">
-                Близость к метро
-                <img src="img/return-on-investment 1.png" alt="return" class="distance__return">
-                <ul class="dropdown">
-                  <li><a href="#"><em></em>Twitter</a></li>
-                  <li><button class="distance__btn">Любая</button></li>
-                </ul>
-              </div>
-            </div>
+            <ul class="accordion">
+              <li class="accordion-item">
+                <input id="s1" class="hide" type="checkbox">
+                <label for="s1" class="accordion-label ">Близость к метро <img src="img/return-on-investment 1.png"
+                    alt="return" class="return">
+                </label>
+                <div class="distance accordion-child">
+                  <div class="distance__group">
+                    <span class="box box1">10</span>
+                    <span class="box box2">10-20</span>
+                    <span class="box box3">20-40</span>
+                    <span class="box box4">40+</span>
+                  </div>
+                  <button class="distance__btn">Любая</button>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

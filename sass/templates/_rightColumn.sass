@@ -1,4 +1,48 @@
+.accordion
+  list-style: none
+  padding: 0.5rem
+  opacity: 0.9
+  width: 100%
+.accordion-item
+  position: relative
+  width: 100%
+.accordion-label
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between  
+  font-style: normal
+  font-weight: bold
+  font-size: 18px
+  line-height: 110%
+  color: #111111
+  cursor: pointer
+.return
+  transform: rotate(0deg)
+.return.active
+  transform: rotate(180deg)
+
+.accordion-child
+  margin: 0
+  overflow: hidden
+  transition: all 0.3s ease
+  opacity: 0
+  height: 0
+  transform: scale(1,0)
+  transform-origin: center top
+  color: #fff
+  input[type=checkbox]:checked ~ &
+    margin: auto
+    height: auto
+    opacity: 1
+    transform: scale(1)
+.hide
+  position: absolute
+  width: 1px
 .distance
+  &__group
+    display: flex
+    flex-direction: row
   &__btn
     width: 270px
     height: 50px
@@ -12,55 +56,23 @@
     text-align: center
     color: #AFAFAF
     margin-top: 10px
-  &__return
-    margin-left: auto
-    margin-right: 10px
-.wrapper-dropdown-2 
+.box
   display: flex
   align-items: center
-  position: relative
-  width: 270px
+  justify-content: center
+  width: 68px
   height: 50px
-  margin: 0 auto
-  background: #fff
+  border: 1px solid #E5E5E5
+  box-sizing: border-box
+  border-radius: 0px 2px 2px 0px
   cursor: pointer
-  outline: none
-  font-style: normal
-  font-weight: bold
-  font-size: 18px
-  line-height: 110%
-  color: #111111
-    
-.wrapper-dropdown-2 .dropdown 
-  position: absolute
-  top: 100%
-  right: 0px
-  background: white
-  transition: all 0.3s ease-out
-  list-style: none
-  opacity: 0
-  pointer-events: none
-  padding: 0
-  margin: 0
-.wrapper-dropdown-2 .dropdown li a 
-  display: block
-  text-decoration: none
-  color: #333
-  border-left: 5px solid
-  padding: 10px
-  transition: all 0.3s ease-out
-
-.wrapper-dropdown-2 .dropdown li i 
-  margin-right: 5px
-  color: inherit
-  vertical-align: middle
-
-.wrapper-dropdown-2 .dropdown li:hover a 
-  color: grey
-
-.wrapper-dropdown-2.distance__return.active:after 
-  transform: scale(180deg)
-
-.wrapper-dropdown-2.active .dropdown 
-  opacity: 1
-  pointer-events: auto
+.box.active
+  background: #F03B8C
+.box1.active
+  background: #F03B8C
+.box2.active
+  background: #F03B8C
+.box3.active
+  background: #F03B8C
+.box4.active
+  background: #F03B8C
