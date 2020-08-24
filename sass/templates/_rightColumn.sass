@@ -1,6 +1,6 @@
 .accordion
   list-style: none
-  padding: 0.5rem
+  padding: 0px
   opacity: 0.9
   width: 100%
 .accordion-item
@@ -17,13 +17,23 @@
   line-height: 110%
   color: #111111
   cursor: pointer
-.return
-  transform: rotate(0deg)
-.return.active
+.returnDistance
   transform: rotate(180deg)
+.returnDistance.active
+  transform: rotate(0deg)
+.returnTerm
+  transform: rotate(180deg)
+.returnTerm.active
+  transform: rotate(0deg)
+.returnOptions
+  margin-top: 35px
+  transform: rotate(180deg)
+.returnOptions.active
+  margin-top: 35px
+  transform: rotate(0deg)
 
 .accordion-child
-  margin: 0
+  margin-top: 25px
   overflow: hidden
   transition: all 0.3s ease
   opacity: 0
@@ -32,7 +42,6 @@
   transform-origin: center top
   color: #fff
   input[type=checkbox]:checked ~ &
-    margin: auto
     height: auto
     opacity: 1
     transform: scale(1)
@@ -56,23 +65,245 @@
     text-align: center
     color: #AFAFAF
     margin-top: 10px
+    cursor: pointer
+    margin-bottom: 20px
+    &:active, &:focus 
+      outline: none
 .box
   display: flex
   align-items: center
   justify-content: center
   width: 68px
   height: 50px
+  color: #AFAFAF
   border: 1px solid #E5E5E5
   box-sizing: border-box
   border-radius: 0px 2px 2px 0px
   cursor: pointer
 .box.active
   background: #F03B8C
+  color: #ffffff
 .box1.active
   background: #F03B8C
+  color: #ffffff
 .box2.active
   background: #F03B8C
+  color: #ffffff
 .box3.active
   background: #F03B8C
+  color: #ffffff
 .box4.active
   background: #F03B8C
+  color: #ffffff
+.car.active
+  color: #F03B8C
+.ceiling.active
+  color: #F03B8C
+.pantry.active
+  color: #F03B8C
+.windows.active
+  color: #F03B8C
+.floor.active
+  color: #F03B8C
+.car2.active
+  color: #F03B8C
+.ceiling2.active
+  color: #F03B8C
+.pantry2.active
+  color: #F03B8C
+.options
+  margin-top: 33px
+  &__btn
+    text-decoration: none
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 190%
+    color: #F03B8C
+.term 
+  margin-top: 26px
+.radiobutton
+  &__item
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 180%
+    color: #5F5F5F
+    transition: all 0.3 ease 0s
+    margin-bottom: 8px
+    position: relative
+    padding: 0 0 0 25px
+    cursor: pointer
+.radiobutton__item.active 
+  color: #F03B8C
+.radiobutton__item.active:after 
+  transform: scale(1)
+.radiobutton__item:before 
+  content: ""
+  width: 16px
+  height: 16px
+  position: absolute
+  left: 0
+  top: 7px
+  border-radius: 50%
+  border: 1px solid #F03B8C
+  box-sizing: border-box
+.radiobutton__item:after 
+  position: absolute
+  width: 16px
+  height: 16px
+  left: 0px
+  top: 7px
+  background-image: url(../img/radiobutton.png)
+  content: ""
+  border-radius: 50%
+  transform: scale(0)
+  transition: 0.3s ease
+.radiobutton__item input 
+  display: none
+
+
+input[type="checkbox"] 
+  display: none
+.checkbox
+  margin-left: 10px
+  margin-top: -7px
+  &__item
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 180%
+    display: flex
+    align-items: center
+    color: #5F5F5F
+    padding-bottom: 10px
+.checkboxLabel
+  cursor: pointer   
+.checkbox__item.active 
+  color: #F03B8C
+.checkboxLabel.active::before
+  transform: scale(0)
+.checkboxLabel::before 
+  content: ''
+  display: inline-block
+  width: 16px
+  height: 16px
+  vertical-align: middle
+  margin-top: -5px
+  margin-left: -10px
+  margin-right: 10px
+  color: #F03B8C
+  border: 1px solid #F03B8C
+  box-sizing: border-box
+  border-radius: 2px
+
+input[type="checkbox"]:checked + .checkboxLabel::before 
+  content: ''
+  background-size: 100%
+  background-image: url(../img/checkbox.png)
+  border-radius: 2px
+  width: 16px
+  height: 16px
+  border: 1px solid #F03B8C
+  box-sizing: border-box
+  transform: scale(1)
+  transition: 0.3s ease-in-out
+
+.checkbox2
+  font-style: normal
+  font-weight: normal
+  font-size: 18px
+  color: #111111
+  padding: 0 0 0 49px
+  position: relative
+  cursor: pointer
+  margin-bottom: 15px
+  margin-top: 32px
+
+.checkbox2.active 
+  color: #000
+
+.checkbox2.active:before 
+  background-color: #F03B8C
+
+.checkbox2.active:after 
+  background-color: #FFFFFF
+  left: 21px
+
+.checkbox2:before 
+  content: ""
+  width: 40px
+  height: 20px
+  border-radius: 20px
+  background-color: #FFFFFF
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
+  position: absolute
+  left: 0
+  top: 0
+  transition: 0.5s ease
+.checkbox2:after 
+  content: ""
+  position: absolute
+  width: 18px
+  height: 18px
+  left: 1px
+  top: 1px
+  background-color: #F03B8C
+  border-radius: 50%
+  transition: 0.5s ease-in-out
+.checkbox2 input 
+  display: none
+
+.rightColumn
+  &__btn
+    width: 270px
+    height: 50px
+    border: 1px solid #F03B8C
+    background: #F03B8C
+    box-sizing: border-box
+    border-radius: 2px
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 180%
+    text-align: center
+    color: #ffffff
+    margin-top: 21px
+    cursor: pointer
+    margin-bottom: 20px
+    transition: 0.5s ease-in-out
+    &:active, &:focus 
+      outline: none
+    &:hover
+      border: 1px solid #F03B8C
+      background: #ffffff
+      color: #F03B8C
+  &__btn2
+    width: 270px
+    height: 54px
+    border: 1px solid #5F5F5F
+    background: #F9F9F9
+    box-sizing: border-box
+    border-radius: 2px
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 180%
+    text-align: center
+    color: #5F5F5F
+    margin-top: 10px
+    cursor: pointer
+    margin-bottom: 20px
+    transition: 0.5s ease-in-out
+    display: flex
+    align-items: center
+    justify-content: center
+    &:active, &:focus
+      outline: none
+    &:hover
+      border: 1px solid #F03B8C
+      background: #ffffff
+      box-shadow: 0px 4px 10px rgba(#F03B8C, 0.2)
+
+.close
+  margin-left: 6px
