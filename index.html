@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animate.min.css" media="all" />
   <title>Site-Master</title>
 </head>
 
@@ -204,11 +202,11 @@
                 </label>
                 <div class="distance accordion-child">
                   <div class="distance__group">
-                    <span class="box box1">
-                      &lt;10 </span> <span class="box box2">10-20
+                    <span class="box box1" id="box1">
+                      &lt;10 </span> <span class="box box2" id="box2">10-20
                     </span>
-                    <span class="box box3">20-40</span>
-                    <span class="box box4">40+</span>
+                    <span class="box box3" id="box3">20-40</span>
+                    <span class="box box4" id="box4">40+</span>
                   </div>
                   <button class="distance__btn">Любая</button>
                 </div>
@@ -300,11 +298,15 @@
       </div>
     </section>
   </main>
+  <div class="buttonUp">
+    <span id="button-up">
+      <img src="img/arrow-up_icon-icons.com_73669.svg" alt="Наверх" />
+    </span>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
   </script>
-  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="https://5e7c8b12452c471f8d34e456--reverent-yonath-cad9c2.netlify.com/js/wow.min.js">
+  <script src="js/buttonUp.min.js"></script>
   </script>
 </body>
 

@@ -49,20 +49,15 @@ $(document).ready(function () {
 
   $(".box1").click(function (event) {
     $(".box1").toggleClass("active");
-    $(".box2, .box3, .box4").removeClass("active");
   });
   $(".box2").click(function (event) {
     $(".box2").toggleClass("active");
-    $(".box1, .box3, .box4").removeClass("active");
-
   });
   $(".box3").click(function (event) {
     $(".box3").toggleClass("active");
-    $(".box2, .box1, .box4").removeClass("active");
   });
   $(".box4").click(function (event) {
     $(".box4").toggleClass("active");
-    $(".box2, .box3, .box1").removeClass("active");
   });
   $(".distance__btn").click(function (event) {
     $(".box1, .box2, .box3, .box4").removeClass("active");
@@ -130,8 +125,8 @@ $(document).ready(function () {
     return false;
   });
 
-  $('button').click(function () {
-    $('input:radio').prop('radio', false);
+  $('.rightColumn__btn2').click(function () {
+    window.location.reload();
   });
 
 });

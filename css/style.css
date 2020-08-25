@@ -993,3 +993,26 @@ input[type="checkbox"]:checked + .checkboxLabel::before {
     justify-content: center; }
   .card {
     margin-right: 0; } }
+
+#button-up {
+  display: none;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  color: #000;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: 15px;
+  z-index: 50;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
+  #button-up img {
+    width: 40px;
+    height: 40px; }
+  #button-up:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 0.9; }
